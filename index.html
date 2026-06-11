@@ -312,7 +312,7 @@
 <!-- STICKY GROUP -->
 <div id="sticky-group">
   <a id="sticky-tweet" href="#" onclick="shareOnX(event)" title="Share on X">𝕏</a>
-  <a id="sticky-buy-btn" href="https://nad.fun" target="_blank" rel="noreferrer">🚀 Buy $MONKO</a>
+  <a id="sticky-buy-btn" href="https://nad.fun/tokens/0xEfC01f36e8423CdbE1306D60C6A131eD7b8E7777" target="_blank" rel="noreferrer">🚀 Buy $MONKO</a>
 </div>
 
 <!-- NAVBAR -->
@@ -330,7 +330,7 @@
       <a href="#howtobuy">How To Buy</a>
       <a class="nav-social" href="https://x.com/Monkosaurus_" target="_blank" rel="noreferrer">𝕏</a>
       <a class="nav-social" href="https://t.me/monkosaurus" target="_blank" rel="noreferrer">TG</a>
-      <a class="nav-buy-cta" href="https://nad.fun" target="_blank" rel="noreferrer">🚀 Buy $MONKO</a>
+      <a class="nav-buy-cta" href="https://nad.fun/tokens/0xEfC01f36e8423CdbE1306D60C6A131eD7b8E7777" target="_blank" rel="noreferrer">🚀 Buy $MONKO</a>
     </div>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
   </div>
@@ -354,12 +354,12 @@
       <div class="ca-box">
         <span class="ca-label">CONTRACT ADDRESS</span>
         <div class="ca-row">
-          <span class="ca-addr" id="ca-text">🔒 Coming Soon...</span>
-          <button class="ca-btn" id="ca-copy-btn" onclick="copyCA()">⏳ Soon</button>
+          <span class="ca-addr" id="ca-text">0xEfC01f36e8423CdbE1306D60C6A131eD7b8E7777</span>
+          <button class="ca-btn copyable" id="ca-copy-btn" onclick="copyCA()">📋 Copy CA</button>
         </div>
       </div>
       <div class="hero-btns">
-        <a href="https://nad.fun" target="_blank" rel="noreferrer" class="btn-primary glow">🚀 Buy on nad.fun</a>
+        <a href="https://nad.fun/tokens/0xEfC01f36e8423CdbE1306D60C6A131eD7b8E7777" target="_blank" rel="noreferrer" class="btn-primary glow">🚀 Buy on nad.fun</a>
         <a href="https://t.me/monkosaurus" target="_blank" rel="noreferrer" class="btn-secondary">✈️ Join Telegram</a>
       </div>
       <div class="hero-bottom-row">
@@ -369,7 +369,7 @@
           <span class="hero-social-dot">·</span>
           <a href="https://t.me/monkosaurus" target="_blank" rel="noreferrer" class="hero-social-link">Telegram</a>
           <span class="hero-social-dot">·</span>
-          <a href="https://nad.fun" target="_blank" rel="noreferrer" class="hero-social-link">nad.fun</a>
+          <a href="https://nad.fun/tokens/0xEfC01f36e8423CdbE1306D60C6A131eD7b8E7777" target="_blank" rel="noreferrer" class="hero-social-link">nad.fun</a>
         </div>
       </div>
     </div>
@@ -398,7 +398,7 @@
     <div class="stat-item"><span class="stat-icon">🔥</span><span class="stat-value">0 / 0</span><span class="stat-label">Buy / Sell Tax</span></div>
     <div class="stat-item"><span class="stat-icon">⚡</span><span class="stat-value">MONAD</span><span class="stat-label">Blockchain</span></div>
     <div class="stat-item"><span class="stat-icon">🚀</span><span class="stat-value">nad.fun</span><span class="stat-label">Launching On</span></div>
-    <div class="stat-item"><span class="stat-icon">🔒</span><span class="stat-value">SOON™</span><span class="stat-label">Contract</span></div>
+    <div class="stat-item"><span class="stat-icon">🔒</span><span class="stat-value" style="font-size:11px;letter-spacing:0">0xEfC0...7777</span><span class="stat-label">Contract</span></div>
   </div>
 </div>
 
@@ -538,7 +538,7 @@
       <div class="buy-card"><div class="buy-num">04</div><div class="buy-icon">🚀</div><h3 class="buy-title">Buy $MONKO</h3><p class="buy-desc">Swap MON for $MONKO. Confirm the tx. Welcome to the dino army — you're in!</p></div>
     </div>
     <div class="buy-cta">
-      <a href="https://nad.fun" target="_blank" rel="noreferrer" class="btn-primary large glow">🚀 Buy $MONKO on nad.fun</a>
+      <a href="https://nad.fun/tokens/0xEfC01f36e8423CdbE1306D60C6A131eD7b8E7777" target="_blank" rel="noreferrer" class="btn-primary large glow">🚀 Buy $MONKO on nad.fun</a>
     </div>
   </div>
 </section>
@@ -564,7 +564,7 @@
       <div class="footer-socials">
         <a href="https://x.com/Monkosaurus_" target="_blank" rel="noreferrer" class="footer-social-btn">𝕏 Twitter</a>
         <a href="https://t.me/monkosaurus" target="_blank" rel="noreferrer" class="footer-social-btn">✈️ Telegram</a>
-        <a href="https://nad.fun" target="_blank" rel="noreferrer" class="footer-social-btn">🚀 nad.fun</a>
+        <a href="https://nad.fun/tokens/0xEfC01f36e8423CdbE1306D60C6A131eD7b8E7777" target="_blank" rel="noreferrer" class="footer-social-btn">🚀 nad.fun</a>
       </div>
     </div>
     <div class="footer-divider"></div>
@@ -577,9 +577,9 @@
 
 <script>
   /* ── CA ── */
-  const CA_VALUE = "SOON";
+  const CA_VALUE = "0xEfC01f36e8423CdbE1306D60C6A131eD7b8E7777";
   function copyCA() {
-    if (CA_VALUE === "SOON") return;
+    
     navigator.clipboard.writeText(CA_VALUE).then(() => {
       const btn = document.getElementById("ca-copy-btn");
       btn.textContent = "✅ Copied!";
