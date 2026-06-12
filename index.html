@@ -37,7 +37,11 @@
     .reveal { opacity:0; transform:translateY(32px); transition:opacity 0.7s ease,transform 0.7s ease; }
     .reveal.on { opacity:1; transform:translateY(0); }
 
-    /* ── CURSOR SPARKLE ── */
+    /* ── CA COPY BUTTON ── */
+  .ca-btn.copyable { background:linear-gradient(135deg,#c084fc,#a855f7); color:#fff; cursor:pointer; }
+  .ca-btn.copyable:hover { filter:brightness(1.1); transform:scale(1.04); }
+
+  /* ── CURSOR SPARKLE ── */
     .cursor-spark { position:fixed; pointer-events:none; border-radius:50%; background:radial-gradient(circle,#e879f9 0%,#c084fc 60%,transparent 100%); transform:translate(-50%,-50%); z-index:9999; animation:spark-fade 0.8s ease forwards; }
     @keyframes spark-fade { 0%{opacity:1;transform:translate(-50%,-50%) scale(1)} 100%{opacity:0;transform:translate(-50%,-50%) scale(0.1)} }
 
@@ -390,7 +394,7 @@
 <!-- STICKY GROUP -->
 <div id="sticky-group">
   <a id="sticky-tweet" href="#" onclick="shareOnX(event)" title="Share on X">𝕏</a>
-  <a id="sticky-buy-btn" href="https://nad.fun" target="_blank" rel="noreferrer">🚀 Buy $MONKO</a>
+  <a id="sticky-buy-btn" href="https://nad.fun/tokens/0xC130C797e250c23B611Fb7DE9B9d88E0E61E7777" target="_blank" rel="noreferrer">🚀 Buy $MONKO</a>
 </div>
 
 <!-- NAVBAR -->
@@ -408,7 +412,7 @@
       <a href="#howtobuy">How To Buy</a>
       <a class="nav-social" href="https://x.com/Monkosaurus_" target="_blank" rel="noreferrer">𝕏</a>
       <a class="nav-social" href="https://t.me/monkosaurus" target="_blank" rel="noreferrer">TG</a>
-      <a class="nav-buy-cta shimmer" href="https://nad.fun" target="_blank" rel="noreferrer">🚀 Buy $MONKO</a>
+      <a class="nav-buy-cta shimmer" href="https://nad.fun/tokens/0xC130C797e250c23B611Fb7DE9B9d88E0E61E7777" target="_blank" rel="noreferrer">🚀 Buy $MONKO</a>
     </div>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()">☰</button>
   </div>
@@ -434,12 +438,12 @@
       <div class="ca-box">
         <span class="ca-label">CONTRACT ADDRESS</span>
         <div class="ca-row">
-          <span class="ca-addr">🔜 Soon</span>
-          <button class="ca-btn">⏳ Coming Soon</button>
+          <span class="ca-addr" id="ca-addr-text">0xC130C797e250c23B611Fb7DE9B9d88E0E61E7777</span>
+          <button class="ca-btn copyable" id="ca-copy-btn" onclick="copyCA()">📋 Copy</button>
         </div>
       </div>
       <div class="hero-btns">
-        <a href="https://nad.fun" target="_blank" rel="noreferrer" class="btn-primary glow shimmer">🚀 Buy on nad.fun</a>
+        <a href="https://nad.fun/tokens/0xC130C797e250c23B611Fb7DE9B9d88E0E61E7777" target="_blank" rel="noreferrer" class="btn-primary glow shimmer">🚀 Buy on nad.fun</a>
         <a href="https://t.me/monkosaurus" target="_blank" rel="noreferrer" class="btn-secondary">✈️ Join Telegram</a>
       </div>
       <div class="hero-bottom-row">
@@ -449,7 +453,7 @@
           <span class="hero-social-dot">·</span>
           <a href="https://t.me/monkosaurus" target="_blank" rel="noreferrer" class="hero-social-link">Telegram</a>
           <span class="hero-social-dot">·</span>
-          <a href="https://nad.fun" target="_blank" rel="noreferrer" class="hero-social-link">nad.fun</a>
+          <a href="https://nad.fun/tokens/0xC130C797e250c23B611Fb7DE9B9d88E0E61E7777" target="_blank" rel="noreferrer" class="hero-social-link">nad.fun</a>
         </div>
       </div>
     </div>
@@ -472,7 +476,7 @@
     <div class="stat-item"><span class="stat-icon">🔥</span><span class="stat-value">0 / 0</span><span class="stat-label">Buy / Sell Tax</span></div>
     <div class="stat-item"><span class="stat-icon">⚡</span><span class="stat-value">MONAD</span><span class="stat-label">Blockchain</span></div>
     <div class="stat-item"><span class="stat-icon">🚀</span><span class="stat-value">nad.fun</span><span class="stat-label">Launching On</span></div>
-    <div class="stat-item"><span class="stat-icon">🔒</span><span class="stat-value" style="font-size:14px;letter-spacing:0;color:#fbbf24">Soon™</span><span class="stat-label">Contract</span></div>
+    <div class="stat-item"><span class="stat-icon">🔒</span><span class="stat-value" style="font-size:11px;letter-spacing:0;color:var(--green)">0xC130...7777</span><span class="stat-label">Contract</span></div>
   </div>
 </div>
 
@@ -606,7 +610,7 @@
       <div class="buy-card"><div class="buy-num">04</div><div class="buy-icon">🚀</div><h3 class="buy-title">Buy $MONKO</h3><p class="buy-desc">Swap MON for $MONKO. Confirm the tx. Welcome to the dino army — you're in!</p></div>
     </div>
     <div class="buy-cta">
-      <a href="https://nad.fun" target="_blank" rel="noreferrer" class="btn-primary large glow shimmer">🚀 Buy $MONKO on nad.fun</a>
+      <a href="https://nad.fun/tokens/0xC130C797e250c23B611Fb7DE9B9d88E0E61E7777" target="_blank" rel="noreferrer" class="btn-primary large glow shimmer">🚀 Buy $MONKO on nad.fun</a>
     </div>
   </div>
 </section>
@@ -632,7 +636,7 @@
       <div class="footer-socials">
         <a href="https://x.com/Monkosaurus_" target="_blank" rel="noreferrer" class="footer-social-btn">𝕏 Twitter</a>
         <a href="https://t.me/monkosaurus" target="_blank" rel="noreferrer" class="footer-social-btn">✈️ Telegram</a>
-        <a href="https://nad.fun" target="_blank" rel="noreferrer" class="footer-social-btn">🚀 nad.fun</a>
+        <a href="https://nad.fun/tokens/0xC130C797e250c23B611Fb7DE9B9d88E0E61E7777" target="_blank" rel="noreferrer" class="footer-social-btn">🚀 nad.fun</a>
       </div>
     </div>
     <div class="footer-divider"></div>
@@ -644,6 +648,17 @@
 </footer>
 
 <script>
+  var CA = "0xC130C797e250c23B611Fb7DE9B9d88E0E61E7777";
+
+  /* ── Copy CA ── */
+  function copyCA() {
+    navigator.clipboard.writeText(CA).then(function() {
+      var btn = document.getElementById("ca-copy-btn");
+      btn.textContent = "✅ Copied!";
+      setTimeout(function() { btn.textContent = "📋 Copy"; }, 2000);
+    });
+  }
+
   /* ── Share on X ── */
   function shareOnX(e) {
     e.preventDefault();
@@ -769,7 +784,7 @@
       ["Where can I buy $MONKO?", "Monkosaurus launches on nad.fun — a fair launch launchpad on Monad. No presale, no VC. Everyone enters at the same time."],
       ["What is MONAD CHAIN?", "Monad is a high-performance EVM-compatible blockchain — one of the fastest on the planet. Perfect for a beast like Monkosaurus."],
       ["Is there a buy/sell tax?", "Zero. 0% buy tax, 0% sell tax. We hate taxes just like dinos hated the asteroid."],
-      ["When is the CA released?", "CA drops at launch on nad.fun. Follow Twitter and Telegram — we'll announce it there first. Stay alert."],
+      ["What is the Contract Address?", "CA: 0xC130C797e250c23B611Fb7DE9B9d88E0E61E7777 — Copy it from the hero section and paste it on nad.fun to buy $MONKO."],
       ["Is this financial advice?", "Absolutely not. $MONKO is a meme with no intrinsic value. Only invest what you can afford to lose. This is dino fun."],
     ];
     var list = document.getElementById("faq-list");
