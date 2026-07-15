@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Monkosaurus ($MONKO) — The Prehistoric Meme King</title>
-  <meta name="description" content="Monkosaurus ($MONKO) — The prehistoric meme king on Robinhood Mainnet. Join the herd. Launch on fun.noxa.fi" />
+  <meta name="description" content="Monkosaurus ($MONKO) — The prehistoric meme king on Robinhood Mainnet. Join the herd. Buy on aped.store" />
   <meta property="og:title" content="Monkosaurus ($MONKO) — The Prehistoric Meme King" />
   <meta property="og:description" content="Monkosaurus ($MONKO) — The prehistoric meme king on Robinhood Mainnet. Join the herd." />
   <meta property="og:type" content="website" />
@@ -18,15 +18,21 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --neon: #39ff14;
-      --lime: #a8e63d;
-      --dark: #050f05;
-      --card: #0a1a0a;
+      --rh-green:   #00C805;
+      --rh-green2:  #00a804;
+      --rh-green3:  #33d639;
+      --dark:       #0d0d0d;
+      --dark2:      #141414;
+      --card:       #1a1a1a;
+      --card2:      #1e1e1e;
+      --text:       #ffffff;
+      --text-muted: #9e9e9e;
+      --text-soft:  #cccccc;
     }
 
     body {
       background: var(--dark);
-      color: var(--neon);
+      color: var(--text);
       font-family: 'Fredoka One', sans-serif;
       overflow-x: hidden;
     }
@@ -41,8 +47,8 @@
       100% { transform: translateX(-50%); }
     }
     @keyframes glow-pulse {
-      0%,100% { box-shadow: 0 0 20px #39ff14, 0 0 40px #39ff14; }
-      50%      { box-shadow: 0 0 30px #a8e63d, 0 0 60px #a8e63d; }
+      0%,100% { box-shadow: 0 0 20px #00C805, 0 0 40px #00C805; }
+      50%      { box-shadow: 0 0 30px #33d639, 0 0 60px #33d639; }
     }
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(30px); }
@@ -57,65 +63,68 @@
       transition: background 0.3s, border-bottom 0.3s;
     }
     nav.scrolled {
-      background: rgba(5,15,5,0.95);
-      border-bottom: 1px solid var(--neon);
+      background: rgba(13,13,13,0.97);
+      border-bottom: 1px solid rgba(0,200,5,0.35);
       backdrop-filter: blur(12px);
-      box-shadow: 0 0 20px rgba(57,255,20,0.2);
+      box-shadow: 0 2px 24px rgba(0,200,5,0.12);
     }
     .nav-logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
     .nav-logo img {
       width: 44px; height: 44px; border-radius: 50%;
-      border: 2px solid var(--neon); box-shadow: 0 0 12px var(--neon);
+      border: 2px solid var(--rh-green); box-shadow: 0 0 12px rgba(0,200,5,0.5);
       object-fit: cover;
     }
     .nav-logo span {
       font-family: 'Bangers', sans-serif; font-size: 1.5rem;
-      color: var(--neon); letter-spacing: 0.05em;
-      text-shadow: 0 0 10px var(--neon);
+      color: var(--rh-green); letter-spacing: 0.05em;
+      text-shadow: 0 0 10px rgba(0,200,5,0.4);
     }
     .nav-links { display: flex; gap: 1rem; align-items: center; }
     .nav-links a {
-      color: var(--lime); text-decoration: none;
+      color: var(--text-soft); text-decoration: none;
       font-family: 'Bangers', sans-serif; font-size: 1.1rem;
       letter-spacing: 0.05em;
+      transition: color 0.2s;
     }
+    .nav-links a:hover { color: var(--rh-green); }
     .btn-primary {
-      background: linear-gradient(135deg, #39ff14, #a8e63d);
-      color: #050f05; font-family: 'Bangers', sans-serif;
+      background: var(--rh-green);
+      color: #0d0d0d; font-family: 'Bangers', sans-serif;
       font-size: 1.15rem; letter-spacing: 0.1em;
       padding: 0.65rem 1.75rem; border-radius: 0.5rem;
       border: none; cursor: pointer; font-weight: 700;
       text-transform: uppercase; text-decoration: none;
       display: inline-block;
-      box-shadow: 0 0 20px rgba(57,255,20,0.5);
-      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 0 20px rgba(0,200,5,0.35);
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
     }
     .btn-primary:hover {
+      background: var(--rh-green3);
       transform: scale(1.05) translateY(-2px);
-      box-shadow: 0 0 40px rgba(57,255,20,0.8);
+      box-shadow: 0 0 36px rgba(0,200,5,0.55);
     }
     .btn-outline {
-      background: transparent; color: var(--neon);
-      border: 2px solid var(--neon); font-family: 'Bangers', sans-serif;
+      background: transparent; color: var(--rh-green);
+      border: 2px solid var(--rh-green); font-family: 'Bangers', sans-serif;
       font-size: 1.1rem; letter-spacing: 0.1em;
       padding: 0.6rem 1.5rem; border-radius: 0.5rem;
       cursor: pointer; font-weight: 700; text-transform: uppercase;
       text-decoration: none; display: inline-block;
-      box-shadow: 0 0 10px rgba(57,255,20,0.3);
+      box-shadow: 0 0 10px rgba(0,200,5,0.2);
       transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
     }
     .btn-outline:hover {
-      background: rgba(57,255,20,0.1);
-      box-shadow: 0 0 25px rgba(57,255,20,0.6);
+      background: rgba(0,200,5,0.1);
+      box-shadow: 0 0 25px rgba(0,200,5,0.45);
       transform: scale(1.05);
     }
 
     /* ===== TICKER ===== */
     .ticker-wrap {
       overflow: hidden;
-      background: rgba(57,255,20,0.07);
-      border-top: 1px solid var(--neon);
-      border-bottom: 1px solid var(--neon);
+      background: rgba(0,200,5,0.06);
+      border-top: 1px solid rgba(0,200,5,0.25);
+      border-bottom: 1px solid rgba(0,200,5,0.25);
       padding: 0.5rem 0;
     }
     .ticker-inner {
@@ -125,9 +134,9 @@
     }
     .ticker-inner span {
       font-family: 'Bangers', sans-serif; font-size: 1rem;
-      color: var(--neon); letter-spacing: 0.1em;
+      color: var(--rh-green); letter-spacing: 0.1em;
       padding: 0 2rem;
-      text-shadow: 0 0 8px var(--neon);
+      text-shadow: 0 0 8px rgba(0,200,5,0.4);
     }
 
     /* ===== HERO ===== */
@@ -137,27 +146,27 @@
       align-items: center; justify-content: center;
       padding: 8rem 2rem 4rem;
       background:
-        radial-gradient(ellipse at top, rgba(57,255,20,0.15) 0%, transparent 60%),
-        radial-gradient(ellipse at bottom, rgba(168,230,61,0.08) 0%, transparent 50%),
-        #050f05;
+        radial-gradient(ellipse at top, rgba(0,200,5,0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at bottom, rgba(0,168,4,0.06) 0%, transparent 50%),
+        #0d0d0d;
       position: relative; overflow: hidden;
       text-align: center;
     }
     .hero-tag {
       display: inline-block;
-      background: rgba(57,255,20,0.1);
-      border: 1px solid var(--neon);
+      background: rgba(0,200,5,0.08);
+      border: 1px solid rgba(0,200,5,0.4);
       border-radius: 2rem; padding: 0.3rem 1.2rem;
       margin-bottom: 1.5rem;
       font-family: 'Fredoka One', sans-serif;
-      color: var(--neon); font-size: 0.9rem;
+      color: var(--rh-green); font-size: 0.9rem;
       letter-spacing: 0.15em; text-transform: uppercase;
-      text-shadow: 0 0 8px var(--neon);
+      text-shadow: 0 0 8px rgba(0,200,5,0.4);
     }
     .hero-logo {
       width: 260px; height: 260px; border-radius: 50%;
-      border: 4px solid var(--neon);
-      box-shadow: 0 0 40px var(--neon), 0 0 80px rgba(57,255,20,0.4);
+      border: 4px solid var(--rh-green);
+      box-shadow: 0 0 40px rgba(0,200,5,0.5), 0 0 80px rgba(0,200,5,0.2);
       object-fit: cover;
       animation: float 4s ease-in-out infinite;
       margin-bottom: 1.5rem;
@@ -165,38 +174,38 @@
     .hero h1 {
       font-family: 'Bangers', sans-serif;
       font-size: clamp(4rem, 10vw, 8rem);
-      color: var(--neon);
-      text-shadow: 0 0 20px var(--neon), 0 0 40px var(--neon), 5px 5px 0 #1a5c00, 8px 8px 0 #0d2e00;
+      color: var(--rh-green);
+      text-shadow: 0 0 20px rgba(0,200,5,0.6), 0 0 40px rgba(0,200,5,0.3), 5px 5px 0 #004d02, 8px 8px 0 #002601;
       letter-spacing: 0.05em; line-height: 1; margin-bottom: 0.25rem;
     }
     .hero h2 {
       font-family: 'Bangers', sans-serif;
       font-size: clamp(2rem, 6vw, 4.5rem);
-      color: var(--lime);
-      text-shadow: 0 0 15px var(--lime), 3px 3px 0 #4a7a00;
+      color: #ffffff;
+      text-shadow: 0 0 15px rgba(0,200,5,0.3), 3px 3px 0 #003301;
       letter-spacing: 0.2em; margin-bottom: 1rem;
     }
     .hero p {
       font-size: clamp(1rem, 2.5vw, 1.4rem);
-      color: #c5f28a; margin-bottom: 2.5rem;
+      color: var(--text-soft); margin-bottom: 2.5rem;
       max-width: 600px; line-height: 1.6;
     }
     .hero-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
     .hero-contract {
       display: inline-block;
       padding: 0.75rem 1.5rem;
-      background: rgba(57,255,20,0.05);
-      border: 1px solid rgba(57,255,20,0.3);
+      background: rgba(0,200,5,0.04);
+      border: 1px solid rgba(0,200,5,0.25);
       border-radius: 0.75rem;
     }
     .hero-contract .label {
-      color: var(--lime); font-size: 0.9rem; letter-spacing: 0.1em;
+      color: var(--text-muted); font-size: 0.9rem; letter-spacing: 0.1em;
     }
     .hero-contract .addr {
       font-family: 'Courier New', monospace;
-      color: var(--neon); font-size: 1rem;
+      color: var(--rh-green); font-size: 1rem;
       margin-left: 0.75rem;
-      text-shadow: 0 0 8px var(--neon);
+      text-shadow: 0 0 8px rgba(0,200,5,0.4);
     }
 
     /* ===== SECTIONS ===== */
@@ -204,29 +213,29 @@
     .section-title {
       font-family: 'Bangers', sans-serif;
       font-size: clamp(2.5rem, 5vw, 4rem);
-      color: var(--neon);
-      text-shadow: 0 0 20px var(--neon), 3px 3px 0 #1a5c00;
+      color: var(--rh-green);
+      text-shadow: 0 0 20px rgba(0,200,5,0.4), 3px 3px 0 #004d02;
       letter-spacing: 0.05em; text-align: center; margin-bottom: 0.75rem;
     }
     .section-sub {
-      text-align: center; color: var(--lime);
+      text-align: center; color: var(--text-muted);
       font-size: 1.1rem; margin-bottom: 3rem;
     }
     .card {
-      background: linear-gradient(135deg, #0a1a0a, #0d200d);
-      border: 1px solid rgba(57,255,20,0.3);
+      background: var(--card);
+      border: 1px solid rgba(0,200,5,0.18);
       border-radius: 1rem; padding: 2rem;
-      transition: transform 0.2s;
+      transition: transform 0.2s, border-color 0.2s;
     }
-    .card:hover { transform: translateY(-6px); }
+    .card:hover { transform: translateY(-6px); border-color: rgba(0,200,5,0.4); }
     .comic-card {
-      border: 3px solid var(--neon); border-radius: 1rem;
-      background: linear-gradient(135deg, #0a1a0a, #0d200d);
-      box-shadow: 6px 6px 0 #1a5c00, 0 0 20px rgba(57,255,20,0.3);
+      border: 2px solid rgba(0,200,5,0.4); border-radius: 1rem;
+      background: var(--card2);
+      box-shadow: 0 4px 32px rgba(0,200,5,0.08);
     }
 
     /* ABOUT */
-    .about { background: rgba(0,0,0,0.3); }
+    .about { background: var(--dark2); }
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -235,33 +244,33 @@
     .feature-card { text-align: center; }
     .feature-icon { font-size: 3rem; margin-bottom: 1rem; }
     .feature-title {
-      font-family: 'Bangers', sans-serif; color: var(--neon);
+      font-family: 'Bangers', sans-serif; color: var(--rh-green);
       font-size: 1.4rem; letter-spacing: 0.05em; margin-bottom: 0.75rem;
-      text-shadow: 0 0 8px var(--neon);
+      text-shadow: 0 0 8px rgba(0,200,5,0.3);
     }
-    .feature-desc { color: #c5f28a; font-size: 0.95rem; line-height: 1.6; }
+    .feature-desc { color: var(--text-soft); font-size: 0.95rem; line-height: 1.6; }
     .social-row {
       display: flex; gap: 1.5rem; justify-content: center;
       flex-wrap: wrap; max-width: 1100px; margin: 0 auto;
     }
     .social-link {
       display: flex; align-items: center; gap: 0.5rem;
-      background: rgba(57,255,20,0.08); border: 1px solid var(--neon);
+      background: rgba(0,200,5,0.06); border: 1px solid rgba(0,200,5,0.3);
       border-radius: 0.5rem; padding: 0.75rem 1.5rem;
-      color: var(--neon); text-decoration: none;
+      color: var(--rh-green); text-decoration: none;
       font-family: 'Bangers', sans-serif; font-size: 1.2rem;
       letter-spacing: 0.05em;
-      box-shadow: 0 0 8px rgba(57,255,20,0.2);
+      box-shadow: 0 0 8px rgba(0,200,5,0.1);
       transition: background 0.2s, box-shadow 0.2s;
     }
     .social-link:hover {
-      background: rgba(57,255,20,0.15);
-      box-shadow: 0 0 20px rgba(57,255,20,0.5);
+      background: rgba(0,200,5,0.12);
+      box-shadow: 0 0 20px rgba(0,200,5,0.3);
     }
 
     /* TOKENOMICS */
     .tokenomics {
-      background: linear-gradient(180deg, transparent, rgba(57,255,20,0.03) 50%, transparent);
+      background: var(--dark);
     }
     .stats-grid {
       display: grid;
@@ -269,23 +278,25 @@
       gap: 1.25rem; max-width: 1100px; margin: 0 auto 3rem;
     }
     .stat-card {
-      background: linear-gradient(135deg, #0a1a0a, #0d200d);
-      border: 1px solid rgba(57,255,20,0.35);
+      background: var(--card);
+      border: 1px solid rgba(0,200,5,0.2);
       border-radius: 0.75rem; padding: 1.5rem 1rem;
       text-align: center;
-      box-shadow: 0 0 15px rgba(57,255,20,0.1);
+      box-shadow: 0 0 15px rgba(0,200,5,0.06);
+      transition: border-color 0.2s;
     }
+    .stat-card:hover { border-color: rgba(0,200,5,0.45); }
     .stat-value {
       font-family: 'Bangers', sans-serif; font-size: 1.8rem;
-      color: var(--neon); text-shadow: 0 0 10px var(--neon); line-height: 1.1;
+      color: var(--rh-green); text-shadow: 0 0 10px rgba(0,200,5,0.35); line-height: 1.1;
     }
-    .stat-unit { color: var(--lime); font-size: 0.8rem; margin-bottom: 0.25rem; }
-    .stat-label { color: #6d8a5a; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; }
+    .stat-unit { color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.25rem; }
+    .stat-label { color: #555; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; }
     .distribution { padding: 2.5rem; max-width: 1100px; margin: 0 auto; }
     .dist-title {
-      font-family: 'Bangers', sans-serif; color: var(--neon);
+      font-family: 'Bangers', sans-serif; color: var(--rh-green);
       font-size: 2rem; text-align: center; margin-bottom: 2rem;
-      letter-spacing: 0.05em; text-shadow: 0 0 10px var(--neon);
+      letter-spacing: 0.05em; text-shadow: 0 0 10px rgba(0,200,5,0.35);
     }
     .dist-item { margin-bottom: 1rem; }
     .dist-row {
@@ -297,9 +308,9 @@
       font-family: 'Bangers', sans-serif; font-size: 1.2rem;
     }
     .bar-track {
-      height: 12px; background: rgba(57,255,20,0.08);
+      height: 12px; background: rgba(255,255,255,0.05);
       border-radius: 6px; overflow: hidden;
-      border: 1px solid rgba(57,255,20,0.2);
+      border: 1px solid rgba(0,200,5,0.15);
     }
     .bar-fill {
       height: 100%; border-radius: 6px;
@@ -307,47 +318,51 @@
     }
 
     /* HOW TO BUY */
-    .how { background: linear-gradient(180deg, transparent, rgba(57,255,20,0.04) 50%, transparent); }
+    .how { background: var(--dark2); }
     .steps-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1.5rem; max-width: 1100px; margin: 0 auto;
     }
     .step-card {
-      background: rgba(10,26,10,0.7);
-      border: 1px solid rgba(57,255,20,0.25);
+      background: var(--card);
+      border: 1px solid rgba(0,200,5,0.2);
       border-radius: 1rem; padding: 2rem 1.5rem; text-align: center;
+      transition: border-color 0.2s, transform 0.2s;
     }
+    .step-card:hover { border-color: rgba(0,200,5,0.5); transform: translateY(-4px); }
     .step-num {
       font-family: 'Bangers', sans-serif; font-size: 3.5rem;
-      color: var(--neon); text-shadow: 0 0 15px var(--neon); line-height: 1;
+      color: var(--rh-green); text-shadow: 0 0 15px rgba(0,200,5,0.4); line-height: 1;
       margin-bottom: 0.75rem;
     }
     .step-title {
-      font-family: 'Bangers', sans-serif; color: var(--lime);
+      font-family: 'Bangers', sans-serif; color: #ffffff;
       font-size: 1.3rem; letter-spacing: 0.05em; margin-bottom: 0.75rem;
     }
-    .step-desc { color: #c5f28a; font-size: 0.9rem; line-height: 1.6; }
+    .step-desc { color: var(--text-soft); font-size: 0.9rem; line-height: 1.6; }
 
     /* ROADMAP */
-    .roadmap { background: rgba(0,0,0,0.4); }
+    .roadmap { background: var(--dark); }
     .roadmap-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1.5rem; max-width: 1100px; margin: 0 auto;
     }
     .phase-card {
-      background: linear-gradient(135deg, #0a1a0a, #0d200d);
+      background: var(--card);
       border-radius: 1rem; padding: 2rem; position: relative; overflow: hidden;
+      transition: transform 0.2s;
     }
+    .phase-card:hover { transform: translateY(-4px); }
     .phase-card.active {
-      border: 2px solid var(--neon);
-      box-shadow: 0 0 25px rgba(57,255,20,0.3);
+      border: 2px solid var(--rh-green);
+      box-shadow: 0 0 25px rgba(0,200,5,0.2);
     }
-    .phase-card.upcoming { border: 2px solid rgba(57,255,20,0.2); }
+    .phase-card.upcoming { border: 2px solid rgba(0,200,5,0.15); }
     .phase-badge {
       position: absolute; top: 1rem; right: 1rem;
-      background: var(--neon); color: #050f05;
+      background: var(--rh-green); color: #0d0d0d;
       font-family: 'Bangers', sans-serif; font-size: 0.75rem;
       padding: 0.2rem 0.6rem; border-radius: 1rem;
       letter-spacing: 0.1em;
@@ -362,15 +377,15 @@
     }
     .phase-items { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
     .phase-items li {
-      color: #c5f28a; font-size: 0.9rem;
+      color: var(--text-soft); font-size: 0.9rem;
       display: flex; align-items: flex-start; gap: 0.5rem;
     }
     .phase-items li span { flex-shrink: 0; margin-top: 0.1rem; }
 
     /* FOOTER */
     footer {
-      background: #020a02;
-      border-top: 1px solid rgba(57,255,20,0.3);
+      background: #080808;
+      border-top: 1px solid rgba(0,200,5,0.2);
       padding: 3rem 2rem 2rem;
     }
     .footer-inner {
@@ -384,31 +399,27 @@
     .footer-brand { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
     .footer-brand img {
       width: 40px; height: 40px; border-radius: 50%;
-      border: 2px solid var(--neon); object-fit: cover;
-      box-shadow: 0 0 10px var(--neon);
+      border: 2px solid var(--rh-green); object-fit: cover;
+      box-shadow: 0 0 10px rgba(0,200,5,0.35);
     }
     .footer-brand span {
       font-family: 'Bangers', sans-serif; font-size: 1.5rem;
-      color: var(--neon); text-shadow: 0 0 10px var(--neon);
+      color: var(--rh-green); text-shadow: 0 0 10px rgba(0,200,5,0.3);
       letter-spacing: 0.05em;
     }
-    .footer-desc { color: #4a7a3a; font-size: 0.85rem; max-width: 280px; line-height: 1.6; }
+    .footer-desc { color: #555; font-size: 0.85rem; max-width: 280px; line-height: 1.6; }
     .footer-links { display: flex; flex-direction: column; gap: 0.5rem; }
     .footer-links-title {
-      font-family: 'Bangers', sans-serif; color: var(--neon);
+      font-family: 'Bangers', sans-serif; color: var(--rh-green);
       font-size: 1rem; letter-spacing: 0.1em; margin-bottom: 0.25rem;
     }
-    .footer-links a { color: var(--lime); text-decoration: none; font-size: 0.9rem; }
+    .footer-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--rh-green); }
     .footer-divider {
-      border-top: 1px solid rgba(57,255,20,0.15); padding-top: 1.5rem; text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1.5rem; text-align: center;
     }
-    .footer-disclaimer { color: #2a4a2a; font-size: 0.8rem; line-height: 1.6; }
-    .footer-copy { color: #2a4a2a; font-size: 0.75rem; margin-top: 0.5rem; }
-
-    /* Decorative dots */
-    .dot {
-      position: absolute; border-radius: 50%; pointer-events: none;
-    }
+    .footer-disclaimer { color: #3a3a3a; font-size: 0.8rem; line-height: 1.6; }
+    .footer-copy { color: #3a3a3a; font-size: 0.75rem; margin-top: 0.5rem; }
 
     /* Responsive */
     @media (max-width: 640px) {
@@ -431,7 +442,7 @@
     <a href="#about">About</a>
     <a href="#tokenomics">Tokenomics</a>
     <a href="#roadmap">Roadmap</a>
-    <a href="https://fun.noxa.fi" target="_blank" rel="noopener noreferrer" class="btn-primary">Buy $MONKO</a>
+    <a href="https://aped.store" target="_blank" rel="noopener noreferrer" class="btn-primary">Buy $MONKO</a>
   </div>
 </nav>
 
@@ -444,18 +455,18 @@
 <section class="hero">
   <div class="hero-tag">Robinhood Mainnet</div>
   <img src="https://i.imgur.com/fvhgpNd.png" alt="Monkosaurus" class="hero-logo"
-       onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22260%22 height=%22260%22><circle cx=%22130%22 cy=%22130%22 r=%22130%22 fill=%22%230a1a0a%22/><text x=%2250%25%22 y=%2255%25%22 font-size=%2280%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22>🦕</text></svg>'">
+       onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22260%22 height=%22260%22><circle cx=%22130%22 cy=%22130%22 r=%22130%22 fill=%22%231a1a1a%22/><text x=%2250%25%22 y=%2255%25%22 font-size=%2280%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22>🦕</text></svg>'">
   <h1>MONKOSAURUS</h1>
   <h2>$MONKO</h2>
   <p>The Prehistoric Meme King Has Arrived!<br>Big brain. Tiny arms. Massive gains. RAWR!</p>
   <div class="hero-btns">
-    <a href="https://fun.noxa.fi" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:1.3rem;padding:0.9rem 2.5rem">Buy on fun.noxa.fi</a>
+    <a href="https://aped.store" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:1.3rem;padding:0.9rem 2.5rem">Buy on aped.store</a>
     <a href="https://x.com/Monkosaurus_" target="_blank" rel="noopener noreferrer" class="btn-outline">Follow on X</a>
     <a href="https://t.me/MonkosaurusChat" target="_blank" rel="noopener noreferrer" class="btn-outline">Telegram</a>
   </div>
   <div class="hero-contract">
     <span class="label">CONTRACT ADDRESS:</span>
-    <span class="addr">COMING SOON</span>
+    <span class="addr">SOON</span>
   </div>
 </section>
 
@@ -483,13 +494,13 @@
       <div class="card feature-card">
         <div class="feature-icon">🌿</div>
         <div class="feature-title">GREEN MACHINE</div>
-        <p class="feature-desc">Neon green. Always in profit. Powered by dino energy.</p>
+        <p class="feature-desc">Always in profit. Powered by dino energy on Robinhood Mainnet.</p>
       </div>
     </div>
     <div class="social-row">
       <a href="https://x.com/Monkosaurus_" target="_blank" rel="noopener noreferrer" class="social-link">𝕏 @Monkosaurus_</a>
       <a href="https://t.me/MonkosaurusChat" target="_blank" rel="noopener noreferrer" class="social-link">✈ Telegram Chat</a>
-      <a href="https://fun.noxa.fi" target="_blank" rel="noopener noreferrer" class="social-link">🚀 fun.noxa.fi</a>
+      <a href="https://aped.store" target="_blank" rel="noopener noreferrer" class="social-link">🛒 aped.store</a>
     </div>
   </div>
 </section>
@@ -502,32 +513,62 @@
     <div class="stats-grid">
       <div class="stat-card"><div class="stat-value">1,000,000,000</div><div class="stat-unit">$MONKO</div><div class="stat-label">Total Supply</div></div>
       <div class="stat-card"><div class="stat-value">Robinhood</div><div class="stat-unit">Mainnet</div><div class="stat-label">Network</div></div>
-      <div class="stat-card"><div class="stat-value">fun.noxa.fi</div><div class="stat-unit"></div><div class="stat-label">Launch Platform</div></div>
-      <div class="stat-card"><div class="stat-value">Coming</div><div class="stat-unit">Soon</div><div class="stat-label">Contract</div></div>
+      <div class="stat-card"><div class="stat-value">aped.store</div><div class="stat-unit"></div><div class="stat-label">Buy Platform</div></div>
+      <div class="stat-card"><div class="stat-value">SOON</div><div class="stat-unit">TBA</div><div class="stat-label">Contract</div></div>
       <div class="stat-card"><div class="stat-value">0%</div><div class="stat-unit">Buy / Sell</div><div class="stat-label">Tax</div></div>
-      <div class="stat-card"><div class="stat-value">10%</div><div class="stat-unit">On Launch</div><div class="stat-label">Burn</div></div>
+      <div class="stat-card"><div class="stat-value">5%</div><div class="stat-unit">On Launch</div><div class="stat-label">Burn</div></div>
     </div>
     <div class="comic-card distribution">
       <div class="dist-title">TOKEN DISTRIBUTION</div>
+      <!-- Presale 75% -->
       <div class="dist-item">
-        <div class="dist-row"><span class="dist-label" style="color:#39ff14">Presale / Fair Launch</span><span class="dist-pct" style="color:#39ff14">80%</span></div>
-        <div class="bar-track"><div class="bar-fill" style="width:50%;background:linear-gradient(90deg,#39ff14,#39ff1488);box-shadow:0 0 10px #39ff14"></div></div>
+        <div class="dist-row">
+          <span class="dist-label" style="color:#00C805">Presale / Fair Launch</span>
+          <span class="dist-pct" style="color:#00C805">75%</span>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:75%;background:linear-gradient(90deg,#00C805,#00C80588);box-shadow:0 0 10px #00C805"></div>
+        </div>
       </div>
+      <!-- Liquidity 10% -->
       <div class="dist-item" style="margin-top:1rem">
-        <div class="dist-row"><span class="dist-label" style="color:#a8e63d">Liquidity Pool</span><span class="dist-pct" style="color:#a8e63d">10%</span></div>
-        <div class="bar-track"><div class="bar-fill" style="width:3%;background:linear-gradient(90deg,#a8e63d,#a8e63d88);box-shadow:0 0 10px #a8e63d"></div></div>
+        <div class="dist-row">
+          <span class="dist-label" style="color:#33d639">Liquidity Pool</span>
+          <span class="dist-pct" style="color:#33d639">10%</span>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:10%;background:linear-gradient(90deg,#33d639,#33d63988);box-shadow:0 0 10px #33d639"></div>
+        </div>
       </div>
+      <!-- Dev 10% -->
       <div class="dist-item" style="margin-top:1rem">
-        <div class="dist-row"><span class="dist-label" style="color:#6ddb00">Marketing &amp; Dev</span><span class="dist-pct" style="color:#6ddb00">5%</span></div>
-        <div class="bar-track"><div class="bar-fill" style="width:2%;background:linear-gradient(90deg,#6ddb00,#6ddb0088);box-shadow:0 0 10px #6ddb00"></div></div>
+        <div class="dist-row">
+          <span class="dist-label" style="color:#7fff6e">Marketing &amp; Dev</span>
+          <span class="dist-pct" style="color:#7fff6e">10%</span>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:10%;background:linear-gradient(90deg,#7fff6e,#7fff6e88);box-shadow:0 0 10px #7fff6e"></div>
+        </div>
       </div>
+      <!-- Community 3% -->
       <div class="dist-item" style="margin-top:1rem">
-        <div class="dist-row"><span class="dist-label" style="color:#c5f28a">Community Rewards</span><span class="dist-pct" style="color:#c5f28a">3%</span></div>
-        <div class="bar-track"><div class="bar-fill" style="width:3%;background:linear-gradient(90deg,#c5f28a,#c5f28a88);box-shadow:0 0 10px #c5f28a"></div></div>
+        <div class="dist-row">
+          <span class="dist-label" style="color:#cccccc">Community Rewards</span>
+          <span class="dist-pct" style="color:#cccccc">3%</span>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:3%;background:linear-gradient(90deg,#cccccc,#cccccc88);box-shadow:0 0 10px #cccccc"></div>
+        </div>
       </div>
+      <!-- Team 2% -->
       <div class="dist-item" style="margin-top:1rem">
-        <div class="dist-row"><span class="dist-label" style="color:#4a9e00">Team (Locked 6mo)</span><span class="dist-pct" style="color:#4a9e00">2%</span></div>
-        <div class="bar-track"><div class="bar-fill" style="width:2%;background:linear-gradient(90deg,#4a9e00,#4a9e0088);box-shadow:0 0 10px #4a9e00"></div></div>
+        <div class="dist-row">
+          <span class="dist-label" style="color:#888888">Team (Locked 6mo)</span>
+          <span class="dist-pct" style="color:#888888">2%</span>
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:2%;background:linear-gradient(90deg,#888888,#88888888);box-shadow:0 0 10px #888888"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -537,11 +578,28 @@
 <section class="how">
   <div style="max-width:1100px;margin:0 auto">
     <h2 class="section-title">HOW TO BUY</h2>
+    <p class="section-sub">4 simple steps to join the prehistoric herd.</p>
     <div class="steps-grid">
-      <div class="step-card"><div class="step-num">01</div><div class="step-title">Get a Wallet</div><p class="step-desc">Download MetaMask or any Web3 wallet. Add Robinhood Mainnet as a custom network.</p></div>
-      <div class="step-card"><div class="step-num">02</div><div class="step-title">Get Robinhood Tokens</div><p class="step-desc">Bridge or acquire the native token on Robinhood Mainnet to use for gas and swaps.</p></div>
-      <div class="step-card"><div class="step-num">03</div><div class="step-title">Go to fun.noxa.fi</div><p class="step-desc">Visit fun.noxa.fi, connect your wallet, search for MONKO or paste the contract address.</p></div>
-      <div class="step-card"><div class="step-num">04</div><div class="step-title">Buy $MONKO &amp; HODL</div><p class="step-desc">Set slippage, confirm the transaction. Welcome to the herd! MONKOSAURUS TO THE MOON!</p></div>
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-title">Get a Wallet</div>
+        <p class="step-desc">Download MetaMask or any Web3 wallet. Add Robinhood Mainnet as a custom network.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-title">Get Robinhood Tokens</div>
+        <p class="step-desc">Bridge or acquire the native token on Robinhood Mainnet to use for gas and swaps.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-title">Go to aped.store</div>
+        <p class="step-desc">Visit <strong style="color:#00C805">aped.store</strong>, connect your wallet, and search for MONKO or paste the contract address.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">04</div>
+        <div class="step-title">Buy $MONKO &amp; HODL</div>
+        <p class="step-desc">Set slippage, confirm the transaction. Welcome to the herd! MONKOSAURUS TO THE MOON!</p>
+      </div>
     </div>
   </div>
 </section>
@@ -552,49 +610,53 @@
     <h2 class="section-title">ROADMAP</h2>
     <p class="section-sub">The Monkosaurus journey from extinction to moon.</p>
     <div class="roadmap-grid">
+      <!-- Phase 1 -->
       <div class="phase-card active">
         <div class="phase-badge">ACTIVE</div>
-        <div class="phase-label" style="color:#39ff14;text-shadow:0 0 8px #39ff14">PHASE 1</div>
-        <div class="phase-title" style="color:#39ff14;text-shadow:0 0 10px #39ff14">THE AWAKENING</div>
+        <div class="phase-label" style="color:#00C805;text-shadow:0 0 8px rgba(0,200,5,0.5)">PHASE 1</div>
+        <div class="phase-title" style="color:#00C805;text-shadow:0 0 10px rgba(0,200,5,0.4)">THE AWAKENING</div>
         <ul class="phase-items">
-          <li><span style="color:#39ff14">▶</span> Website Launch</li>
-          <li><span style="color:#39ff14">▶</span> Community Building (X &amp; Telegram)</li>
-          <li><span style="color:#39ff14">▶</span> Fair Launch on fun.noxa.fi</li>
-          <li><span style="color:#39ff14">▶</span> Contract Deployment on Robinhood Mainnet</li>
-          <li><span style="color:#39ff14">▶</span> Liquidity Lock</li>
+          <li><span style="color:#00C805">▶</span> Website &amp; Brand Launch</li>
+          <li><span style="color:#00C805">▶</span> Community Building (X &amp; Telegram)</li>
+          <li><span style="color:#00C805">▶</span> Token Deployment on Robinhood Mainnet</li>
+          <li><span style="color:#00C805">▶</span> Fair Launch on aped.store</li>
+          <li><span style="color:#00C805">▶</span> Liquidity Lock &amp; Contract Verification</li>
         </ul>
       </div>
+      <!-- Phase 2 -->
       <div class="phase-card upcoming">
-        <div class="phase-label" style="color:#4a7a3a">PHASE 2</div>
-        <div class="phase-title" style="color:#a8e63d">THE STAMPEDE</div>
+        <div class="phase-label" style="color:#555">PHASE 2</div>
+        <div class="phase-title" style="color:#cccccc">THE STAMPEDE</div>
         <ul class="phase-items">
-          <li><span style="color:#4a7a3a">▶</span> 1,000+ Holders Milestone</li>
-          <li><span style="color:#4a7a3a">▶</span> DEX Listing</li>
-          <li><span style="color:#4a7a3a">▶</span> CoinGecko &amp; CoinMarketCap Listing</li>
-          <li><span style="color:#4a7a3a">▶</span> Meme Contest &amp; Community Events</li>
-          <li><span style="color:#4a7a3a">▶</span> NFT Collection Teaser</li>
+          <li><span style="color:#555">▶</span> 1,000+ Holders Milestone</li>
+          <li><span style="color:#555">▶</span> DEX Listing (Robinhood DEX)</li>
+          <li><span style="color:#555">▶</span> CoinGecko &amp; CMC Listing</li>
+          <li><span style="color:#555">▶</span> Meme Contest &amp; Community Events</li>
+          <li><span style="color:#555">▶</span> Influencer &amp; KOL Campaigns</li>
         </ul>
       </div>
+      <!-- Phase 3 -->
       <div class="phase-card upcoming">
-        <div class="phase-label" style="color:#4a7a3a">PHASE 3</div>
-        <div class="phase-title" style="color:#a8e63d">THE METEOR</div>
+        <div class="phase-label" style="color:#555">PHASE 3</div>
+        <div class="phase-title" style="color:#cccccc">THE METEOR</div>
         <ul class="phase-items">
-          <li><span style="color:#4a7a3a">▶</span> CEX Listings</li>
-          <li><span style="color:#4a7a3a">▶</span> 10,000+ Holders Milestone</li>
-          <li><span style="color:#4a7a3a">▶</span> Monkosaurus NFT Launch</li>
-          <li><span style="color:#4a7a3a">▶</span> Merchandise &amp; Merch Store</li>
-          <li><span style="color:#4a7a3a">▶</span> Cross-chain Expansion</li>
+          <li><span style="color:#555">▶</span> 10,000+ Holders</li>
+          <li><span style="color:#555">▶</span> CEX Tier-2 Listings</li>
+          <li><span style="color:#555">▶</span> Monkosaurus NFT Collection Launch</li>
+          <li><span style="color:#555">▶</span> Official Merchandise Drop</li>
+          <li><span style="color:#555">▶</span> Cross-chain Bridge Integration</li>
         </ul>
       </div>
+      <!-- Phase 4 -->
       <div class="phase-card upcoming">
-        <div class="phase-label" style="color:#4a7a3a">PHASE 4</div>
-        <div class="phase-title" style="color:#a8e63d">JURASSIC MOON</div>
+        <div class="phase-label" style="color:#555">PHASE 4</div>
+        <div class="phase-title" style="color:#cccccc">JURASSIC MOON</div>
         <ul class="phase-items">
-          <li><span style="color:#4a7a3a">▶</span> 100,000+ Holders</li>
-          <li><span style="color:#4a7a3a">▶</span> Major CEX Listing</li>
-          <li><span style="color:#4a7a3a">▶</span> Monkosaurus DAO Governance</li>
-          <li><span style="color:#4a7a3a">▶</span> Ecosystem Expansion</li>
-          <li><span style="color:#4a7a3a">▶</span> Global Meme Domination</li>
+          <li><span style="color:#555">▶</span> 100,000+ Holders</li>
+          <li><span style="color:#555">▶</span> Tier-1 CEX Listing</li>
+          <li><span style="color:#555">▶</span> Monkosaurus DAO &amp; Governance</li>
+          <li><span style="color:#555">▶</span> Ecosystem Grants &amp; Partnerships</li>
+          <li><span style="color:#555">▶</span> Global Meme Domination 🌍</li>
         </ul>
       </div>
     </div>
@@ -610,13 +672,13 @@
           <img src="https://i.imgur.com/fvhgpNd.png" alt="MONKO" onerror="this.style.display='none'">
           <span>MONKOSAURUS</span>
         </div>
-        <p class="footer-desc">The Prehistoric Meme King on Robinhood Mainnet.<br>Launch: fun.noxa.fi</p>
+        <p class="footer-desc">The Prehistoric Meme King on Robinhood Mainnet.<br>Buy: aped.store</p>
       </div>
       <div class="footer-links">
         <div class="footer-links-title">COMMUNITY</div>
         <a href="https://x.com/Monkosaurus_" target="_blank" rel="noopener noreferrer">𝕏 Twitter / X</a>
         <a href="https://t.me/MonkosaurusChat" target="_blank" rel="noopener noreferrer">Telegram</a>
-        <a href="https://fun.noxa.fi" target="_blank" rel="noopener noreferrer">fun.noxa.fi</a>
+        <a href="https://aped.store" target="_blank" rel="noopener noreferrer">aped.store</a>
       </div>
     </div>
     <div class="footer-divider">
@@ -638,7 +700,7 @@
   const tickerItems = [
     '$MONKO','MONKOSAURUS','TO THE MOON','$MONKO',
     'ROBINHOOD MAINNET','$MONKO','BUY THE DIP','MONKOSAURUS',
-    '$MONKO','FUN.NOXA.FI','$MONKO','JOIN THE HERD',
+    '$MONKO','APED.STORE','$MONKO','JOIN THE HERD',
   ];
   const doubled = [...tickerItems, ...tickerItems];
   const ticker = document.getElementById('ticker');
